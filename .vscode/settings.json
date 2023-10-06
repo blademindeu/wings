@@ -1,0 +1,4 @@
+{
+    "github-actions.use-enterprise": true,
+    "github-actions.remote-name": "main"
+}
