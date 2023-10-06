@@ -9,11 +9,11 @@ import (
 	"github.com/apex/log"
 	"github.com/gin-gonic/gin"
 
-	"github.com/pterodactyl/wings/config"
-	"github.com/pterodactyl/wings/router/middleware"
-	"github.com/pterodactyl/wings/server"
-	"github.com/pterodactyl/wings/server/installer"
-	"github.com/pterodactyl/wings/system"
+	"github.com/blademindeu/wings/config"
+	"github.com/blademindeu/wings/router/middleware"
+	"github.com/blademindeu/wings/server"
+	"github.com/blademindeu/wings/server/installer"
+	"github.com/blademindeu/wings/system"
 )
 
 // Returns information about the system that wings is running on.

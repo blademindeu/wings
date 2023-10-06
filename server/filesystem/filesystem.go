@@ -19,8 +19,8 @@ import (
 	"github.com/karrick/godirwalk"
 	ignore "github.com/sabhiram/go-gitignore"
 
-	"github.com/pterodactyl/wings/config"
-	"github.com/pterodactyl/wings/system"
+	"github.com/blademindeu/wings/config"
+	"github.com/blademindeu/wings/system"
 )
 
 type Filesystem struct {
@@ -534,7 +534,7 @@ func (fs *Filesystem) ListDirectory(p string) ([]Stat, error) {
 				// Don't try to detect the type on a pipe — this will just hang the application and
 				// you'll never get a response back.
 				//
-				// @see https://github.com/pterodactyl/panel/issues/4059
+				// @see https://github.com/blademindeu/panel/issues/4059
 				if cleanedp != "" && f.Mode()&os.ModeNamedPipe == 0 {
 					m, _ = mimetype.DetectFile(filepath.Join(cleaned, f.Name()))
 				} else {

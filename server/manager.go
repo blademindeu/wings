@@ -15,11 +15,11 @@ import (
 	"github.com/gammazero/workerpool"
 	"github.com/goccy/go-json"
 
-	"github.com/pterodactyl/wings/config"
-	"github.com/pterodactyl/wings/environment"
-	"github.com/pterodactyl/wings/environment/docker"
-	"github.com/pterodactyl/wings/remote"
-	"github.com/pterodactyl/wings/server/filesystem"
+	"github.com/blademindeu/wings/config"
+	"github.com/blademindeu/wings/environment"
+	"github.com/blademindeu/wings/environment/docker"
+	"github.com/blademindeu/wings/remote"
+	"github.com/blademindeu/wings/server/filesystem"
 )
 
 type Manager struct {

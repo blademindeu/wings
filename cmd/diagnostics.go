@@ -22,10 +22,10 @@ import (
 	"github.com/goccy/go-json"
 	"github.com/spf13/cobra"
 
-	"github.com/pterodactyl/wings/config"
-	"github.com/pterodactyl/wings/environment"
-	"github.com/pterodactyl/wings/loggers/cli"
-	"github.com/pterodactyl/wings/system"
+	"github.com/blademindeu/wings/config"
+	"github.com/blademindeu/wings/environment"
+	"github.com/blademindeu/wings/loggers/cli"
+	"github.com/blademindeu/wings/system"
 )
 
 const (

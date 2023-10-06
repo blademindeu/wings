@@ -13,12 +13,12 @@ import (
 	"github.com/creasty/defaults"
 	"github.com/goccy/go-json"
 
-	"github.com/pterodactyl/wings/config"
-	"github.com/pterodactyl/wings/environment"
-	"github.com/pterodactyl/wings/events"
-	"github.com/pterodactyl/wings/remote"
-	"github.com/pterodactyl/wings/server/filesystem"
-	"github.com/pterodactyl/wings/system"
+	"github.com/blademindeu/wings/config"
+	"github.com/blademindeu/wings/environment"
+	"github.com/blademindeu/wings/events"
+	"github.com/blademindeu/wings/remote"
+	"github.com/blademindeu/wings/server/filesystem"
+	"github.com/blademindeu/wings/system"
 )
 
 // Server is the high level definition for a server instance being controlled

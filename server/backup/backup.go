@@ -14,8 +14,8 @@ import (
 	"github.com/mholt/archiver/v4"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/pterodactyl/wings/config"
-	"github.com/pterodactyl/wings/remote"
+	"github.com/blademindeu/wings/config"
+	"github.com/blademindeu/wings/remote"
 )
 
 var format = archiver.CompressedArchive{

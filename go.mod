@@ -1,4 +1,4 @@
-module github.com/pterodactyl/wings
+module github.com/blademindeu/wings
 
 go 1.18
 

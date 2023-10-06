@@ -6,8 +6,8 @@ import (
 
 	"github.com/apex/log"
 
-	"github.com/pterodactyl/wings/config"
-	"github.com/pterodactyl/wings/environment"
+	"github.com/blademindeu/wings/config"
+	"github.com/blademindeu/wings/environment"
 )
 
 // To avoid confusion when working with mounts, assume that a server.Mount has not been properly
@@ -23,7 +23,7 @@ func (s *Server) Mounts() []environment.Mount {
 	m := []environment.Mount{
 		{
 			Default:  true,
-			Target:   "/home/container",
+			Target:   "/home/blademind",
 			Source:   s.Filesystem().Path(),
 			ReadOnly: false,
 		},

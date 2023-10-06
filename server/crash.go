@@ -8,8 +8,8 @@ import (
 
 	"emperror.dev/errors"
 
-	"github.com/pterodactyl/wings/config"
-	"github.com/pterodactyl/wings/environment"
+	"github.com/blademindeu/wings/config"
+	"github.com/blademindeu/wings/environment"
 )
 
 type CrashHandler struct {

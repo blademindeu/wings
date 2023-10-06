@@ -17,9 +17,9 @@ import (
 	"github.com/docker/docker/api/types/mount"
 	"github.com/docker/docker/client"
 
-	"github.com/pterodactyl/wings/config"
-	"github.com/pterodactyl/wings/environment"
-	"github.com/pterodactyl/wings/system"
+	"github.com/blademindeu/wings/config"
+	"github.com/blademindeu/wings/environment"
+	"github.com/blademindeu/wings/system"
 )
 
 var ErrNotAttached = errors.Sentinel("not attached to instance")
@@ -281,7 +281,7 @@ func (e *Environment) Destroy() error {
 	// Don't trigger a destroy failure if we try to delete a container that does not
 	// exist on the system. We're just a step ahead of ourselves in that case.
 	//
-	// @see https://github.com/pterodactyl/panel/issues/2001
+	// @see https://github.com/blademindeu/panel/issues/2001
 	if err != nil && client.IsErrNotFound(err) {
 		return nil
 	}

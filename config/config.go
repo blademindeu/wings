@@ -22,7 +22,7 @@ import (
 	"github.com/gbrlsnchs/jwt/v3"
 	"gopkg.in/yaml.v2"
 
-	"github.com/pterodactyl/wings/system"
+	"github.com/blademindeu/wings/system"
 )
 
 const DefaultLocation = "/etc/pterodactyl/config.yml"

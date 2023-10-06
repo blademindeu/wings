@@ -13,8 +13,8 @@ import (
 	"github.com/docker/docker/api/types/container"
 	"github.com/docker/docker/client"
 
-	"github.com/pterodactyl/wings/environment"
-	"github.com/pterodactyl/wings/remote"
+	"github.com/blademindeu/wings/environment"
+	"github.com/blademindeu/wings/remote"
 )
 
 // OnBeforeStart run before the container starts and get the process
@@ -71,7 +71,7 @@ func (e *Environment) Start(ctx context.Context) error {
 		// to the next block of code here. This check was inlined here to guard against
 		// a nil-pointer when checking c.State below.
 		//
-		// @see https://github.com/pterodactyl/panel/issues/2000
+		// @see https://github.com/blademindeu/panel/issues/2000
 		if !client.IsErrNotFound(err) {
 			return errors.WrapIf(err, "environment/docker: failed to inspect container")
 		}

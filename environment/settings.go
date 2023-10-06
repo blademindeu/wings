@@ -8,7 +8,7 @@ import (
 	"github.com/apex/log"
 	"github.com/docker/docker/api/types/container"
 
-	"github.com/pterodactyl/wings/config"
+	"github.com/blademindeu/wings/config"
 )
 
 type Mount struct {
@@ -17,7 +17,7 @@ type Mount struct {
 	// are just in addition to that one, and generally things like shared maps or timezone data.
 	Default bool `json:"-"`
 
-	// The target path on the system. This is "/home/container" for all server's Default mount
+	// The target path on the system. This is "/home/blademind" for all server's Default mount
 	// but in non-container environments you can likely ignore the target and just work with the
 	// source.
 	Target string `json:"target"`
@@ -115,7 +115,7 @@ func (l Limits) AsContainerResources() container.Resources {
 	// If the CPU Limit is not set, don't send any of these fields through. Providing
 	// them seems to break some Java services that try to read the available processors.
 	//
-	// @see https://github.com/pterodactyl/panel/issues/3988
+	// @see https://github.com/blademindeu/panel/issues/3988
 	if l.CpuLimit > 0 {
 		resources.CPUQuota = l.CpuLimit * 1_000
 		resources.CPUPeriod = 100_000
