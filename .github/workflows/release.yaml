@@ -47,8 +47,8 @@ jobs:
           REF: ${{ github.ref }}
         run: |
           BRANCH=release/${REF:10}
-          git config --local user.email "ci@pterodactyl.io"
-          git config --local user.name "Pterodactyl CI"
+          git config --local user.email "info@blademind.eu"
+          git config --local user.name "BlademindEU"
           git checkout -b $BRANCH
           git push -u origin $BRANCH
           sed -i "s/var Version = \".*\"/var Version = \"${REF:11}\"/" system/const.go
