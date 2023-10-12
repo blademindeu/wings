@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-// Rate defines a rate limiter of n items (limit) per duration of time.
+// Rate defines a rate limiter of n items (limit) per duration of time..
 type Rate struct {
 	mu       sync.Mutex
 	limit    uint64
