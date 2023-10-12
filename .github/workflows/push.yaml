@@ -73,4 +73,3 @@ jobs:
         with:
           name: wings_linux_${{ matrix.goarch }}_debug
           path: dist/wings_debug
-## test
