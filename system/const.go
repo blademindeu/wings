@@ -1,3 +1,3 @@
 package system
 // tests
-var Version = "release"
+var Version = "release/v1.11.8"
