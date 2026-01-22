@@ -2,7 +2,7 @@
 
 ![Discord](https://img.shields.io/discord/122900397965705216?label=Discord&logo=Discord&logoColor=white)
 ![GitHub Releases](https://img.shields.io/github/downloads/pterodactyl/wings/latest/total)
-[![Go Report Card](https://goreportcard.com/badge/github.com/blademindeu/wings)](https://goreportcard.com/report/github.com/blademindeu/wings)
+[![Go Report Card](https://goreportcard.com/badge/github.com/pterodactyl/wings)](https://goreportcard.com/report/github.com/pterodactyl/wings)
 
 # Pterodactyl Wings
 
@@ -16,16 +16,16 @@ dependencies, and allowing users to authenticate with the same credentials they 
 ## Sponsors
 
 I would like to extend my sincere thanks to the following sponsors for helping fund Pterodactyl's development.
-[Interested in becoming a sponsor?](https://github.com/sponsors/matthewpi)
+[Interested in becoming a sponsor?](https://github.com/sponsors/pterodactyl)
 
-| Company                                                      | About                                                                                                                                                                                                                                           |
-|--------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [**Aussie Server Hosts**](https://aussieserverhosts.com/)    | No frills Australian Owned and operated High Performance Server hosting for some of the most demanding games serving Australia and New Zealand.                                                                                                 |
-| [**BisectHosting**](https://www.bisecthosting.com/)          | BisectHosting provides Minecraft, Valheim and other server hosting services with the highest reliability and lightning fast support since 2012.                                                                                                 |
-| [**MineStrator**](https://minestrator.com/)                  | Looking for the most highend French hosting company for your minecraft server? More than 24,000 members on our discord trust us. Give us a try!                                                                                                 |
-| [**HostEZ**](https://hostez.io)                              | US & EU Rust & Minecraft Hosting. DDoS Protected bare metal, VPS and colocation with low latency, high uptime and maximum availability. EZ!                                                                                                     |
-| [**Blueprint**](https://blueprint.zip/?pterodactyl=true)     | Create and install Pterodactyl addons and themes with the growing Blueprint framework - the package-manager for Pterodactyl. Use multiple modifications at once without worrying about conflicts and make use of the large extension ecosystem. |
-| [**indifferent broccoli**](https://indifferentbroccoli.com/) | indifferent broccoli is a game server hosting and rental company. With us, you get top-notch computer power for your gaming sessions. We destroy lag, latency, and complexity--letting you focus on the fun stuff.                              |
+| Company                                                                           | About                                                                                                                                                                                                                                           |
+|-----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [**Aussie Server Hosts**](https://aussieserverhosts.com/)                         | No frills Australian Owned and operated High Performance Server hosting for some of the most demanding games serving Australia and New Zealand.                                                                                                 |
+| [**BisectHosting**](https://www.bisecthosting.com/)                               | BisectHosting provides Minecraft, Valheim and other server hosting services with the highest reliability and lightning fast support since 2012.                                                                                                 |
+| [**MineStrator**](https://minestrator.com/)                                       | Looking for the most highend French hosting company for your minecraft server? More than 24,000 members on our discord trust us. Give us a try!                                                                                                 |
+| [**HostEZ**](https://hostez.io)                                                   | US & EU Rust & Minecraft Hosting. DDoS Protected bare metal, VPS and colocation with low latency, high uptime and maximum availability. EZ!                                                                                                     |
+| [**Blueprint**](https://blueprint.zip/?utm_source=pterodactyl&utm_medium=sponsor) | Create and install Pterodactyl addons and themes with the growing Blueprint framework - the package-manager for Pterodactyl. Use multiple modifications at once without worrying about conflicts and make use of the large extension ecosystem. |
+| [**indifferent broccoli**](https://indifferentbroccoli.com/)                      | indifferent broccoli is a game server hosting and rental company. With us, you get top-notch computer power for your gaming sessions. We destroy lag, latency, and complexity--letting you focus on the fun stuff.                              |
 
 ## Documentation
 
@@ -36,6 +36,6 @@ I would like to extend my sincere thanks to the following sponsors for helping f
 
 ## Reporting Issues
 
-Please use the [pterodactyl/panel](https://github.com/blademindeu/panel) repository to report any issues or make
-feature requests for Wings. In addition, the [security policy](https://github.com/blademindeu/panel/security/policy) listed
+Please use the [pterodactyl/panel](https://github.com/pterodactyl/panel) repository to report any issues or make
+feature requests for Wings. In addition, the [security policy](https://github.com/pterodactyl/panel/security/policy) listed
 within that repository also applies to Wings.

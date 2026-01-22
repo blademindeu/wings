@@ -2,11 +2,11 @@ package websocket
 
 import (
 	"context"
+	"encoding/json"
 	"sync"
 	"time"
 
 	"emperror.dev/errors"
-	"github.com/goccy/go-json"
 
 	"github.com/blademindeu/wings/events"
 	"github.com/blademindeu/wings/system"
@@ -131,7 +131,7 @@ func (h *Handler) listenForServerEvents(ctx context.Context) error {
 				continue
 			}
 			var sendErr error
-			message := Message{Event: e.Topic}
+			message := Message{Event: Event(e.Topic)}
 			if str, ok := e.Data.(string); ok {
 				message.Args = []string{str}
 			} else if b, ok := e.Data.([]byte); ok {
@@ -149,7 +149,7 @@ func (h *Handler) listenForServerEvents(ctx context.Context) error {
 					continue
 				}
 			}
-			onError(message.Event, sendErr)
+			onError(string(message.Event), sendErr)
 		}
 		break
 	}
