@@ -29,6 +29,34 @@ func (s *Server) Mounts() []environment.Mount {
 		},
 	}
 
+	cfg := config.Get()
+
+	// Handle mounting a generated `/etc/passwd` if the feature is enabled.
+	if cfg.System.Passwd.Enable {
+		s.Log().WithFields(log.Fields{"source_path": cfg.System.Passwd.Directory}).Info("mouting generated /etc/{group,passwd} to workaround UID/GID issues")
+		m = append(m, environment.Mount{
+			Source:   filepath.Join(cfg.System.Passwd.Directory, "group"),
+			Target:   "/etc/group",
+			ReadOnly: true,
+		})
+		m = append(m, environment.Mount{
+			Source:   filepath.Join(cfg.System.Passwd.Directory, "passwd"),
+			Target:   "/etc/passwd",
+			ReadOnly: true,
+		})
+	}
+
+	if cfg.System.MachineID.Enable {
+		// Hytale wants a machine-id in order to encrypt tokens for the server.
+		// So add a mount to `/etc/machine-id` to a source that contains the
+		// server's UUID without any dashes.
+		m = append(m, environment.Mount{
+			Source:   filepath.Join(cfg.System.MachineID.Directory, s.ID()),
+			Target:   "/etc/machine-id",
+			ReadOnly: true,
+		})
+	}
+
 	// Also include any of this server's custom mounts when returning them.
 	return append(m, s.customMounts()...)
 }
@@ -56,14 +84,12 @@ func (s *Server) customMounts() []environment.Mount {
 			if !strings.HasPrefix(source, filepath.Clean(allowed)) {
 				continue
 			}
-
 			mounted = true
 			mounts = append(mounts, environment.Mount{
 				Source:   source,
 				Target:   target,
 				ReadOnly: m.ReadOnly,
 			})
-
 			break
 		}
 

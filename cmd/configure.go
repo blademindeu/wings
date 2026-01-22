@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"crypto/tls"
+	"encoding/json"
 	"fmt"
 	"io"
 	"net/http"
@@ -13,7 +14,6 @@ import (
 
 	"github.com/AlecAivazis/survey/v2"
 	"github.com/AlecAivazis/survey/v2/terminal"
-	"github.com/goccy/go-json"
 	"github.com/spf13/cobra"
 
 	"github.com/blademindeu/wings/config"
@@ -125,7 +125,7 @@ func configureCmdRun(cmd *cobra.Command, args []string) {
 	}
 
 	fmt.Printf("%+v", req.Header)
-	fmt.Printf(req.URL.String())
+	fmt.Println(req.URL.String())
 
 	res, err := c.Do(req)
 	if err != nil {
