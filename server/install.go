@@ -20,6 +20,7 @@ import (
 
 	"github.com/blademindeu/wings/config"
 	"github.com/blademindeu/wings/environment"
+	"github.com/blademindeu/wings/environment/docker"
 	"github.com/blademindeu/wings/remote"
 	"github.com/blademindeu/wings/system"
 )
@@ -477,6 +478,8 @@ func (ip *InstallationProcess) Execute() (string, error) {
 	if err := ip.client.ContainerStart(ctx, r.ID, container.StartOptions{}); err != nil {
 		return "", err
 	}
+
+	docker.SetCpuBurst(ctx, ip.client, r.ID, hostConf.Resources.CPUQuota)
 
 	// Process the install event in the background by listening to the stream output until the
 	// container has stopped, at which point we'll disconnect from it.
